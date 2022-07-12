@@ -6,9 +6,9 @@ using System.Linq;
 namespace HackerRank.Challenges;
 class Program {
     static void Main(string[] args) {
-        HourglassSum.Call();
+        //HourglassSum.Call();
+        RotationLeft.Call();        
         //MinimumBribes.Call();
-        //RotationLeft.Call();        
         //RepeatedString.Call();
         //JumpingOnClouds.Call();
         //SockMerchant.Call();
