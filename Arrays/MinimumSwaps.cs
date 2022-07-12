@@ -16,7 +16,7 @@ internal static class MinimumSwaps {
 
         Console.WriteLine(result);
     }
-    //TODO: Implement binary search to improve performance
+    
     public static int minimumSwaps(int[] arr) {
         int swapCount = 0, idx = 0, swapCache = 0;
         
