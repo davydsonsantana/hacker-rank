@@ -7,7 +7,8 @@ namespace HackerRank.Challenges;
 class Program {
     static void Main(string[] args) {
         //HourglassSum.Call();
-        RotationLeft.Call();        
+        //RotationLeft.Call();        
+        MinimumSwaps.Call();
         //MinimumBribes.Call();
         //RepeatedString.Call();
         //JumpingOnClouds.Call();
