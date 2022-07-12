@@ -18,35 +18,21 @@ internal static class MinimumSwaps {
     }
     //TODO: Implement binary search to improve performance
     public static int minimumSwaps(int[] arr) {
-        var swapCount = 0;
-        for (int i = 0; i < arr.Length; i++) {
-            bool performSwap = false;
-            int minIndex = i;          
+        int swapCount = 0, idx = 0, swapCache = 0;
+        
+        var visitControl = new bool[arr.Length];
 
-            for(int si = i; si < arr.Length; si++) {
-                //Left to right
-                if (arr[si] < arr[minIndex]) { minIndex = si; performSwap = true; }
-
-                //Half achieved
-                var rightIndex = arr.Length - 1 - si + i;
-                if (rightIndex <= si) break;
-
-                //Right to left
-                if (arr[rightIndex] < arr[minIndex]) { minIndex = rightIndex; performSwap = true; }
-            }
-
-            if (performSwap) {
-                Swap(ref arr, i, minIndex);                
+        while (idx < arr.Length) {
+            if (arr[idx] != idx+1) {
+                swapCache = arr[idx];
+                arr[idx] = arr[arr[idx] - 1];
+                arr[swapCache - 1] = swapCache;
                 swapCount++;
+            } else {
+                idx++;
             }
         }
+
         return swapCount;
     }
-
-    private static void Swap(ref int[] arr, int idxFrom, int idxTo) {
-        int bkp = arr[idxFrom];
-        arr[idxFrom] = arr[idxTo];
-        arr[idxTo] = bkp;
-    }
-
 }
