@@ -8,7 +8,8 @@ class Program {
     static void Main(string[] args) {
         //HourglassSum.Call();
         //RotationLeft.Call();        
-        MinimumSwaps.Call();
+        //MinimumSwaps.Call();
+        ArrayManipulation.Call();
         //MinimumBribes.Call();
         //RepeatedString.Call();
         //JumpingOnClouds.Call();
